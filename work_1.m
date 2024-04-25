@@ -27,24 +27,6 @@ end
 
 fprintf('계산된 날짜와 시간 : %d년 %d월 %d일 %d시\n', year, month, newDay, remainingHours);
 
-function end_of_month = get_end_of_month(year,month)
-    days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-    %February(윤년계산이긴 한데..)
-    if month == 2
-        if mod(year,4) == 0
-            if mod(year, 100)==0
-                if mod(year,400) == 0
-                    days_in_month(month) = 29;
-                end
-            else
-                days_in_month(month) = 29;
-            end
-        end
-    end
-
-    end_of_month = days_in_month(month);
-end
 
 
          
